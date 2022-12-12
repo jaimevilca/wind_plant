@@ -1,0 +1,19 @@
+type Query {
+    windPlants: [WindPlant!]!
+    windPlant(id: ID!): WindPlant
+}
+
+type Mutation {
+    createWindPlant(windPlant: WindPlantInput): WindPlant
+    replaceWindPlant(id: ID!, windPlant: WindPlantInput): WindPlant
+    deleteWindPlant(id: ID!): WindPlant
+}
+
+type WindPlant {
+    id: ID!
+    city: String!
+}
+
+input WindPlantInput {
+    city: String!
+}
