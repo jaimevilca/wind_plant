@@ -45,7 +45,7 @@ public class WindPlantController {
 	}
 
 	@MutationMapping
-	public WindPlant deleteWindPlants(@Argument long id) {
+	public WindPlant deleteWindPlant(@Argument long id) {
 
 		WindPlant windPlant = this.windPlant.findById(id).orElseThrow();
 
